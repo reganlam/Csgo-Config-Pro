@@ -110,13 +110,13 @@
         <div class="container text-center">
             <div class="call-to-action">
               <!-- If player is in a team, return to team page, else return to teams listing-->
-                <p>VIEW TEAM <%=(@player.teamName).upcase%>'S ROSTER.</p>
+                <p>VIEW TEAM <%=(@player.teamName).upcase%>'s ROSTER.</p>
                 <br></br>
                 <%@playerTeam = Team.find_by teamName: "#{@player.teamName}"%>
                 <% if (@playerTeam !=nil) then %>
-                  <a href= "<%=team_path(@playerTeam.id)%>" class="btn-round-lg btn-xl">Disscover More</a>
+                  <a href= "<%=team_path(@playerTeam.id)%>" class="btn-round-lg btn-xl">Discover More</a>
                 <%else%>
-                  <a href= "<%=teams_path%>" class="btn-round-lg btn-xl">Disscover More</a>
+                  <a href= "<%=teams_path%>" class="btn-round-lg btn-xl">Discover More</a>
                 <%end%>
                 <!-- <%= link_to 'Edit', edit_player_path(@player) %>  -->
             </div>
