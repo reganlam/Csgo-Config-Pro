@@ -12,89 +12,92 @@
 
   <!-- NavBar -->
   <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-left">
-              <li>
-                  <%= link_to "CSGOCONFIG", welcome_index_path %>
-              </li>
-          </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a class="page-scroll" href="#about">About</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#services">Teams</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#portfolio">Players</a>
-                </li>
-                <li>
-                    <%= link_to "View All", players_path %>
-                </li>
-            </ul>
-        </div>
-          <!-- /.navbar-collapse -->
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-left">
+            <li>
+                <%= link_to "CSGOCONFIG", welcome_index_path %>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a class="page-scroll" href="#about">About</a>
+            </li>
+            <li>
+                <a class="page-scroll" href="#services">Teams</a>
+            </li>
+            <li>
+                <a class="page-scroll" href="#portfolio">Players</a>
+            </li>
+            <li>
+                <%= link_to "View All", players_path %>
+            </li>
+        </ul>
       </div>
-      <!-- /.container-fluid -->
+    </div>
   </nav>
 
   <!-- Heading -->
   <header>
-      <div class="header-content">
-          <div class="header-content-inner">
-              <h1 id="homeHeading">Counter-Strike: Global Offensive Professional Configs</h1>
-              <hr>
-              <p>CSGOCONFIG can help you play like your favourite Pro by emulating their gaming environment. Start exploring what works for the Pros and for YOU.</p>
-              <!-- <p>Top Teams. Top Pros. Selected by CSGOCONFIG.</p> -->
-              <a href="#about" class="btn-round-lg btn-xl page-scroll">Get Started</a>
-          </div>
+    <div class="header-content">
+      <div class="header-content-inner">
+          <h1 id="homeHeading">Counter-Strike: Global Offensive Professional Configs</h1>
+          <hr>
+          <p>CSGOCONFIG can help you play like your favourite Pro by emulating their gaming environment. Start exploring what works for the Pros and for YOU.</p>
+          <a href="#about" class="btn-round-lg btn-xl page-scroll">Get Started</a>
       </div>
+    </div>
   </header>
 
-  <!-- Search -->
+  <!-- About -->
   <section class="bg-dark" id="about">
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-8 col-lg-offset-2 text-center">
-                  <h2 class="section-heading">We've got what you need!</h2>
-                  <hr class="light">
-                  <p class="text-faded">Top Teams. Top Pros. Hand-picked by CSGOCONFIG.</p>
-                  <br></br>
-                  <a href="#services" class="page-scroll btn-round-lg btn-xl">Explore Now</a>
-              </div>
-          </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 text-center">
+            <h2 class="section-heading">We've got what you need!</h2>
+            <hr class="light">
+            <p class="text-faded">Top Teams. Top Pros. Hand-picked by CSGOCONFIG.</p>
+            <br></br>
+            <a href="#services" class="page-scroll btn-round-lg btn-xl">Explore Now</a>
+        </div>
       </div>
+    </div>
   </section>
 
   <!-- Teams -->
   <section id="services">
-      <div class="container-fluid">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Featured Teams</h2>
-                    <hr class="primary">
+    <div class="container-fluid">
+
+      <!-- Title -->
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12 text-center">
+                  <h2 class="section-heading">Featured Teams</h2>
+                  <hr class="primary">
+              </div>
+          </div>
+      </div>
+
+      <!-- Teams -->
+      <div class="row no-gutter">
+
+        <!-- Astralis -->
+        <div class="col-lg-4 col-sm-6">
+          <a href= "/teams/<%=@astralis.id%>" class="portfolio-box">
+            <img src="<%=image_path("astralis.png")%>" class="img-responsive" alt="">
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                <div class="project-category text-faded">
+                    Team
                 </div>
+                <div class="project-name">
+                    Astralis
+                </div>
+              </div>
             </div>
+          </a>
         </div>
 
-        <div class="row no-gutter">
-          <div class="col-lg-4 col-sm-6">
-            <a href= "/teams/<%=@astralis.id%>" class="portfolio-box">
-                <img src="<%=image_path("astralis.png")%>" class="img-responsive" alt="">
-                <div class="portfolio-box-caption">
-                    <div class="portfolio-box-caption-content">
-                        <div class="project-category text-faded">
-                            Team
-                        </div>
-                        <div class="project-name">
-                            Astralis
-                        </div>
-                    </div>
-                </div>
-            </a>
-          </div>
           <div class="col-lg-4 col-sm-6">
               <a href= "/teams/<%=@virtusPro.id%>" class="portfolio-box">
                   <img src="<%=image_path("virtuspro.png")%>" class="img-responsive" alt="">
