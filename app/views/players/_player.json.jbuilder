@@ -1,0 +1,2 @@
+json.extract! player, :id, :playerName, :teamName, :dpi, :winSens, :gameSens, :zoomSens, :resolution, :aspectRatio, :monitor, :mouse, :keyboard, :mousePad, :headset, :created_at, :updated_at
+json.url player_url(player, format: :json)

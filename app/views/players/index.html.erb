@@ -1,0 +1,65 @@
+<head>
+  <title>CSGO TEAMS</title>
+
+  <!-- Custom Fonts -->
+  <link href="https://blackrockdigital.github.io/startbootstrap-creative/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+  <!-- NavBar -->
+  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-left">
+                <li>
+                    <%= link_to "CSGOCONFIG", welcome_index_path%>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                  <li>
+                      <%= link_to "Home", welcome_index_path%>
+                  </li>
+                  <li>
+                      <%= link_to "Teams", teams_path%>
+                  </li>
+                  <li>
+                      <%= link_to "Players", players_path%>
+                  </li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+  </nav>
+
+  <!-- Players -->
+  <section class="bg-dark" id="about">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading">CSGO PLAYERS</h2>
+                <tbody>
+                  <% @players.order(:playerName).each do |player| %>
+                    <tr>
+                      <br></br>
+                      <td><%= link_to player.playerName, player %></td>
+                      <!-- <td><%=player.teamName%></td> -->
+                      <br></br>
+                      <!-- <td><%= player.teamName %></td> -->
+
+                      <!-- <td><%= link_to 'Show', player %></td> -->
+                      <!-- <td><%= link_to 'Edit', edit_player_path(player) %></td> -->
+                      <!-- <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+                    </tr>
+                  <% end %>
+                </tbody>
+              </div>
+          </div>
+      </div>
+  </section>
+
+</body>

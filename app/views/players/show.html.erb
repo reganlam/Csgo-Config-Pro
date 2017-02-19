@@ -1,0 +1,140 @@
+<head>
+  <title><%=@player.playerName%></title>
+
+  <!-- Custom Fonts -->
+  <link href="https://blackrockdigital.github.io/startbootstrap-creative/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+  <!-- NavBar -->
+  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-left">
+                <li>
+                    <%= link_to "CSGOCONFIG", welcome_index_path%>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                  <li>
+                      <%= link_to "Home", welcome_index_path%>
+                  </li>
+                  <li>
+                      <%= link_to "Teams", teams_path%>
+                  </li>
+                  <li>
+                      <%= link_to "Players", players_path%>
+                  </li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+  </nav>
+
+  <!-- Search -->
+  <section class="bg-dark" id="about">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 text-center">
+                  <h2 class="section-heading"><%=@player.playerName%></h2>
+                  <hr class="light">
+                  <p class="text-faded">Top Teams. Top Pros. Hand-picked by CSGOCONFIG.</p>
+                  <br></br>
+                  <a href="#services" class="page-scroll btn-round-lg btn-xl">Explore Now</a>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Page Content -->
+  <div class="container" id="services">
+
+    <!-- Marketing Icons Section -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                Team <%=@player.teamName%> | <%=@player.playerName%>
+            </h1>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4><i class="fa fa-fw fa-check"></i> Mouse Settings</h4>
+                </div>
+                <div class="panel-body">
+                  <p>Game Sensitivity: <%=@player.gameSens%></p>
+                  <p>Zoom Sensitivity: <%=@player.zoomSens%></p>
+                  <p>Mouse DPI: <%=@player.dpi%></p>
+                  <p>Windows Sensitivity: <%=@player.winSens%> / 11</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4><i class="fa fa-fw fa-check"></i> Display Settings</h4>
+                </div>
+                <div class="panel-body">
+                  <p>Reslution: <%=@player.resolution%></p>
+                  <p>Aspect Ratio: <%=@player.aspectRatio%></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4><i class="fa fa-fw fa-check"></i> Hardware</h4>
+                </div>
+                <div class="panel-body">
+                  <p>Mouse: <%=@player.mouse%></p>
+                  <p>Monitor: <%=@player.monitor%></p>
+                  <p>Keyboard: <%=@player.keyboard%></p>
+                  <p>Headset: <%=@player.headset%></p>
+                  <p>MousePad: <%=@player.mousePad%></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+    <hr>
+  </div>
+
+  <!-- View All -->
+  <section class="no-padding" id="contact">
+    <aside class="bg-dark">
+        <div class="container text-center">
+            <div class="call-to-action">
+              <!-- If player is in a team, return to team page, else return to teams listing-->
+                <p>VIEW TEAM <%=(@player.teamName).upcase%>'S ROSTER.</p>
+                <br></br>
+                <%@playerTeam = Team.find_by teamName: "#{@player.teamName}"%>
+                <% if (@playerTeam !=nil) then %>
+                  <a href= "<%=team_path(@playerTeam.id)%>" class="btn-round-lg btn-xl">Disscover More</a>
+                <%else%>
+                  <a href= "<%=teams_path%>" class="btn-round-lg btn-xl">Disscover More</a>
+                <%end%>
+                <!-- <%= link_to 'Edit', edit_player_path(@player) %>  -->
+            </div>
+        </div>
+    </aside>
+  </section>
+
+  <!-- Plugin JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="https://blackrockdigital.github.io/startbootstrap-creative/vendor/scrollreveal/scrollreveal.min.js"></script>
+  <script src="https://blackrockdigital.github.io/startbootstrap-creative/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <!-- Theme JavaScript -->
+  <script src="https://blackrockdigital.github.io/startbootstrap-creative/js/creative.min.js"></script>
+
+</body>
+
+<!-- <%= link_to 'Edit', edit_player_path(@player) %>  -->
+
+<!--<%= link_to 'Back', players_path %>
+-->

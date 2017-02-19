@@ -1,0 +1,82 @@
+<%= form_for(player) do |f| %>
+  <% if player.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(player.errors.count, "error") %> prohibited this player from being saved:</h2>
+
+      <ul>
+      <% player.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :playerName %>
+    <%= f.text_field :playerName %>
+  </div>
+
+  <div class="field">
+    <%= f.label :teamName %>
+    <%= f.text_field :teamName %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dpi %>
+    <%= f.number_field :dpi %>
+  </div>
+
+  <div class="field">
+    <%= f.label :winSens %>
+    <%= f.number_field :winSens %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gameSens %>
+    <%= f.text_field :gameSens %>
+  </div>
+
+  <div class="field">
+    <%= f.label :zoomSens %>
+    <%= f.text_field :zoomSens %>
+  </div>
+
+  <div class="field">
+    <%= f.label :resolution %>
+    <%= f.text_field :resolution %>
+  </div>
+
+  <div class="field">
+    <%= f.label :aspectRatio %>
+    <%= f.text_field :aspectRatio %>
+  </div>
+
+  <div class="field">
+    <%= f.label :monitor %>
+    <%= f.text_field :monitor %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mouse %>
+    <%= f.text_field :mouse %>
+  </div>
+
+  <div class="field">
+    <%= f.label :keyboard %>
+    <%= f.text_field :keyboard %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mousePad %>
+    <%= f.text_field :mousePad %>
+  </div>
+
+  <div class="field">
+    <%= f.label :headset %>
+    <%= f.text_field :headset %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

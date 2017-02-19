@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  playerName: MyString
+  teamName: MyString
+  dpi: 1
+  winSens: 1
+  gameSens: 1.5
+  zoomSens: 1.5
+  resolution: MyString
+  aspectRatio: MyString
+  monitor: MyString
+  mouse: MyString
+  keyboard: MyString
+  mousePad: MyString
+  headset: MyString
+
+two:
+  playerName: MyString
+  teamName: MyString
+  dpi: 1
+  winSens: 1
+  gameSens: 1.5
+  zoomSens: 1.5
+  resolution: MyString
+  aspectRatio: MyString
+  monitor: MyString
+  mouse: MyString
+  keyboard: MyString
+  mousePad: MyString
+  headset: MyString

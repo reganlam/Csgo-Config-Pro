@@ -1,0 +1,396 @@
+<head>
+  <title>CSGOCONFIG</title>
+
+  <!-- Custom Fonts -->
+  <link href="https://blackrockdigital.github.io/startbootstrap-creative/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+  <!-- NavBar -->
+  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-left">
+              <li>
+                  <%= link_to "CSGOCONFIG", welcome_index_path %>
+              </li>
+          </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="page-scroll" href="#about">About</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#services">Teams</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#portfolio">Players</a>
+                </li>
+                <li>
+                    <%= link_to "View All", players_path %>
+                </li>
+            </ul>
+        </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+  </nav>
+
+  <!-- Heading -->
+  <header>
+      <div class="header-content">
+          <div class="header-content-inner">
+              <h1 id="homeHeading">Counter-Strike: Global Offensive Professional Configs</h1>
+              <hr>
+              <p>CSGOCONFIG can help you play like your favourite Pro by emulating their gaming environment. Start exploring what works for the Pros and for YOU.</p>
+              <!-- <p>Top Teams. Top Pros. Selected by CSGOCONFIG.</p> -->
+              <a href="#about" class="btn-round-lg btn-xl page-scroll">Get Started</a>
+          </div>
+      </div>
+  </header>
+
+  <!-- Search -->
+  <section class="bg-dark" id="about">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 text-center">
+                  <h2 class="section-heading">We've got what you need!</h2>
+                  <hr class="light">
+                  <p class="text-faded">Top Teams. Top Pros. Hand-picked by CSGOCONFIG.</p>
+                  <br></br>
+                  <a href="#services" class="page-scroll btn-round-lg btn-xl">Explore Now</a>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Teams -->
+  <section id="services">
+      <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Featured Teams</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+
+        <div class="row no-gutter">
+          <div class="col-lg-4 col-sm-6">
+            <a href= "/teams/<%=@astralis.id%>" class="portfolio-box">
+                <img src="<%=image_path("astralis.png")%>" class="img-responsive" alt="">
+                <div class="portfolio-box-caption">
+                    <div class="portfolio-box-caption-content">
+                        <div class="project-category text-faded">
+                            Team
+                        </div>
+                        <div class="project-name">
+                            Astralis
+                        </div>
+                    </div>
+                </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+              <a href= "/teams/<%=@virtusPro.id%>" class="portfolio-box">
+                  <img src="<%=image_path("virtuspro.png")%>" class="img-responsive" alt="">
+                  <div class="portfolio-box-caption">
+                      <div class="portfolio-box-caption-content">
+                          <div class="project-category text-faded">
+                              Team
+                          </div>
+                          <div class="project-name">
+                              Virtus.Pro
+                          </div>
+                      </div>
+                  </div>
+              </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+              <a href= "/teams/<%=@fnatic.id%>" class="portfolio-box">
+                    <img src="<%=image_path("fnatic.jpg")%>" class="img-responsive" alt="">
+                  <div class="portfolio-box-caption">
+                      <div class="portfolio-box-caption-content">
+                          <div class="project-category text-faded">
+                              Team
+                          </div>
+                          <div class="project-name">
+                              Fnatic
+                          </div>
+                      </div>
+                  </div>
+              </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+              <a href= "/teams/<%=@natusVincere.id%>" class="portfolio-box">
+                  <img src="<%=image_path("navi.jpg")%>" class="img-responsive" alt="">
+                  <div class="portfolio-box-caption">
+                      <div class="portfolio-box-caption-content">
+                          <div class="project-category text-faded">
+                              Team
+                          </div>
+                          <div class="project-name">
+                              Natus Vincere
+                          </div>
+                      </div>
+                  </div>
+              </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+              <a href= "/teams/<%=@sk.id%>" class="portfolio-box">
+                  <img src="<%=image_path("sk.png")%>" class="img-responsive" alt="">
+                  <div class="portfolio-box-caption">
+                      <div class="portfolio-box-caption-content">
+                          <div class="project-category text-faded">
+                              Team
+                          </div>
+                          <div class="project-name">
+                              SK
+                          </div>
+                      </div>
+                  </div>
+              </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+              <a href= "/teams/<%=@nip.id%>" class="portfolio-box">
+                <img src="<%=image_path("nip.jpg")%>" class="img-responsive" alt="">
+                  <div class="portfolio-box-caption">
+                      <div class="portfolio-box-caption-content">
+                          <div class="project-category text-faded">
+                              Team
+                          </div>
+                          <div class="project-name">
+                              Ninjas in Pyjamas
+                          </div>
+                      </div>
+                  </div>
+              </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+              <a href= "/teams/<%=@faze.id%>" class="portfolio-box">
+                  <img src="<%=image_path("faze.png")%>" class="img-responsive" alt="">
+                  <div class="portfolio-box-caption">
+                      <div class="portfolio-box-caption-content">
+                          <div class="project-category text-faded">
+                              Team
+                          </div>
+                          <div class="project-name">
+                              FaZe
+                          </div>
+                      </div>
+                  </div>
+              </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+              <a href= "/teams/<%=@c9.id%>" class="portfolio-box">
+                  <img src="<%=image_path("c9.jpg")%>" class="img-responsive" alt="">
+                  <div class="portfolio-box-caption">
+                      <div class="portfolio-box-caption-content">
+                          <div class="project-category text-faded">
+                              Team
+                          </div>
+                          <div class="project-name">
+                              Cloud 9
+                          </div>
+                      </div>
+                  </div>
+              </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+              <a href= "/teams/<%=@g2.id%>" class="portfolio-box">
+                  <img src="<%=image_path("g2.png")%>" class="img-responsive" alt="">
+                  <div class="portfolio-box-caption">
+                      <div class="portfolio-box-caption-content">
+                          <div class="project-category text-faded">
+                              Team
+                          </div>
+                          <div class="project-name">
+                              G2
+                          </div>
+                      </div>
+                  </div>
+              </a>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Players -->
+  <section class="no-padding" id="portfolio">
+      <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Featured Players</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+          <div class="row no-gutter">
+              <div class="col-lg-4 col-sm-6">
+                <a href= "/players/<%=@coldzera.id%>" class="portfolio-box">
+                      <img src="<%=image_path("coldzera.jpg")%>" class="img-responsive" alt="">
+                      <div class="portfolio-box-caption">
+                          <div class="portfolio-box-caption-content">
+                              <div class="project-category text-faded">
+                                  SK
+                              </div>
+                              <div class="project-name">
+                                  Coldzera
+                              </div>
+                          </div>
+                      </div>
+                  </a>
+              </div>
+              <div class="col-lg-4 col-sm-6">
+                <a href= "/players/<%=@fallen.id%>" class="portfolio-box">
+                      <img src="<%=image_path("fallen.jpg")%>" class="img-responsive" alt="">
+                      <div class="portfolio-box-caption">
+                          <div class="portfolio-box-caption-content">
+                              <div class="project-category text-faded">
+                                  SK
+                              </div>
+                              <div class="project-name">
+                                  Fallen
+                              </div>
+                          </div>
+                      </div>
+                  </a>
+              </div>
+              <div class="col-lg-4 col-sm-6">
+                <a href= "/players/<%=@device.id%>" class="portfolio-box">
+                      <!-- <img src="device.jpg" class="img-responsive" alt=""> -->
+                      <img src="<%=image_path("device.jpg")%>" class="img-responsive" alt="">
+                      <div class="portfolio-box-caption">
+                          <div class="portfolio-box-caption-content">
+                              <div class="project-category text-faded">
+                                  Astralis
+                              </div>
+                              <div class="project-name">
+                                  Dev1ce
+                              </div>
+                          </div>
+                      </div>
+                  </a>
+              </div>
+              <div class="col-lg-4 col-sm-6">
+                <a href= "/players/<%=@simple.id%>" class="portfolio-box">
+                      <img src="<%=image_path("simple.jpg")%>" class="img-responsive" alt="">
+                      <div class="portfolio-box-caption">
+                          <div class="portfolio-box-caption-content">
+                              <div class="project-category text-faded">
+                                  Natus Vincere
+                              </div>
+                              <div class="project-name">
+                                  S1mple
+                              </div>
+                          </div>
+                      </div>
+                  </a>
+              </div>
+              <div class="col-lg-4 col-sm-6">
+                <a href= "/players/<%=@snax.id%>" class="portfolio-box">
+                      <img src="<%=image_path("snax.jpg")%>" class="img-responsive" alt="">
+                      <div class="portfolio-box-caption">
+                          <div class="portfolio-box-caption-content">
+                              <div class="project-category text-faded">
+                                  Virtus Pro
+                              </div>
+                              <div class="project-name">
+                                  Snax
+                              </div>
+                          </div>
+                      </div>
+                  </a>
+              </div>
+              <div class="col-lg-4 col-sm-6">
+                <a href= "/players/<%=@shox.id%>" class="portfolio-box">
+                      <img src="<%=image_path("shox.jpg")%>" class="img-responsive" alt="">
+                      <div class="portfolio-box-caption">
+                          <div class="portfolio-box-caption-content">
+                              <div class="project-category text-faded">
+                                  G2
+                              </div>
+                              <div class="project-name">
+                                  Shox
+                              </div>
+                          </div>
+                      </div>
+                  </a>
+              </div>
+                <div class="col-lg-4 col-sm-6">
+                  <a href= "/players/<%=@forest.id%>" class="portfolio-box" id = "lastThree">
+                      <img src="<%=image_path("forest.jpg")%>" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Ninjas in Pyjamas
+                                </div>
+                                <div class="project-name">
+                                    F0rest
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                  <a href= "/players/<%=@olofmeister.id%>" class="portfolio-box" id = "lastThree">
+                        <img src="<%=image_path("olof.jpg")%>" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Fnatic
+                                </div>
+                                <div class="project-name">
+                                    Olofmeister
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                  <a href= "/players/<%=@scream.id%>" class="portfolio-box" id = "lastThree">
+                      <img src="<%=image_path("scream.jpg")%>" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    EnvyUs
+                                </div>
+                                <div class="project-name">
+                                    ScreaM
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- View All -->
+  <section class="no-padding" id="contact">
+    <aside class="bg-dark">
+        <div class="container text-center">
+            <div class="call-to-action">
+                <p>VIEW THE PLAYER DATABASE.</p>
+                <br></br>
+                <a href= "<%=players_path%>" class="btn-round-lg btn-xl">Discover More</a>
+            </div>
+        </div>
+    </aside>
+  </section>
+
+
+  <!-- Plugin JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="https://blackrockdigital.github.io/startbootstrap-creative/vendor/scrollreveal/scrollreveal.min.js"></script>
+  <script src="https://blackrockdigital.github.io/startbootstrap-creative/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <!-- Theme JavaScript -->
+  <script src="https://blackrockdigital.github.io/startbootstrap-creative/js/creative.min.js"></script>
+
+</body>
