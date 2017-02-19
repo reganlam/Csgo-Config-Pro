@@ -43,7 +43,7 @@
               <div class="col-lg-8 col-lg-offset-2 text-center">
                   <h2 class="section-heading">TEAM <%=(@team.teamName).upcase%></h2>
                   <hr class="light">
-                  <p class="text-faded">Top Teams. Top Pros. Hand-picked by CSGOCONFIG.</p>
+                  <h4 class="section-heading">Top Teams. Top Pros. Hand-picked by CSGOCONFIG.</h4>
                   <br></br>
                   <a href="#services" class="page-scroll btn-round-lg btn-xl">Explore Now</a>
               </div>
@@ -58,12 +58,14 @@
           <div class="thumbnail">
               <!-- <img src="http://placehold.it/800x500" alt=""> -->
               <div class="caption">
-                  <h3><%= player.playerName %></h3>
-                  <p>eDPI: <%=(player.dpi * player.gameSens).round%></p>
-                  <p>
-                      <a href="<%=player_path(player)%>" class="btn btn-default">INFO</a>
-                      <!-- <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>  -->
-                  </p>
+
+                <h3><%= player.playerName %></h3>
+                <hr>
+                <p>eDPI: <%=(player.dpi * player.gameSens).round%></p>
+                <p>
+                    <a href="<%=player_path(player)%>" class="btn btn-default">INFO</a>
+                    <!-- <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>  -->
+                </p>
               </div>
           </div>
       </div>

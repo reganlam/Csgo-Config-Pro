@@ -43,7 +43,7 @@
               <div class="col-lg-8 col-lg-offset-2 text-center">
                   <h2 class="section-heading"><%=@player.playerName%></h2>
                   <hr class="light">
-                  <p class="text-faded">Top Teams. Top Pros. Hand-picked by CSGOCONFIG.</p>
+                  <h4 class="section-heading">Top Teams. Top Pros. Hand-picked by CSGOCONFIG.</h4>
                   <br></br>
                   <a href="#services" class="page-scroll btn-round-lg btn-xl">Explore Now</a>
               </div>
@@ -58,7 +58,7 @@
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">
-                Team <%=@player.teamName%> | <%=@player.playerName%>
+                <%=@player.teamName%> | <%=@player.playerName%>
             </h1>
         </div>
         <div class="col-md-4">
@@ -91,11 +91,21 @@
                     <h4><i class="fa fa-fw fa-check"></i> Hardware</h4>
                 </div>
                 <div class="panel-body">
-                  <p>Mouse: <%=@player.mouse%></p>
-                  <p>Monitor: <%=@player.monitor%></p>
-                  <p>Keyboard: <%=@player.keyboard%></p>
-                  <p>Headset: <%=@player.headset%></p>
-                  <p>MousePad: <%=@player.mousePad%></p>
+                  <% if( @player.mouse != "" || nil) then %>
+                    <p>Mouse: <%=@player.mouse%></p>
+                  <% end%>
+                  <% if( @player.monitor != "" || nil) then %>
+                    <p>Monitor: <%=@player.monitor%></p>
+                  <% end%>
+                  <% if( @player.keyboard != ""  || nil ) then %>
+                    <p>Keyboard: <%=@player.keyboard%></p>
+                  <% end%>
+                  <% if( @player.headset != "" || nil) then %>
+                    <p>Headset: <%=@player.headset%></p>
+                  <% end%>
+                  <% if( @player.mousePad != "" || nil) then %>
+                    <p>MousePad: <%=@player.mousePad%></p>
+                  <% end%>
                 </div>
             </div>
         </div>
@@ -110,13 +120,15 @@
         <div class="container text-center">
             <div class="call-to-action">
               <!-- If player is in a team, return to team page, else return to teams listing-->
-                <p>VIEW TEAM <%=(@player.teamName).upcase%>'s ROSTER.</p>
-                <br></br>
                 <%@playerTeam = Team.find_by teamName: "#{@player.teamName}"%>
                 <% if (@playerTeam !=nil) then %>
+                  <h3 class="section-heading">View TEAM <%=(@player.teamName).upcase%>'s Roster.</h3>
+                  <br></br>
                   <a href= "<%=team_path(@playerTeam.id)%>" class="btn-round-lg btn-xl">Discover More</a>
                 <%else%>
-                  <a href= "<%=teams_path%>" class="btn-round-lg btn-xl">Discover More</a>
+                  <h3 class="section-heading">View Other Teams.</h3>
+                  <br></br>
+                  <a href= "<%=teams_path%>" class="btn-round-lg btn-xl">Discover</a>
                 <%end%>
                 <!-- <%= link_to 'Edit', edit_player_path(@player) %>  -->
             </div>
